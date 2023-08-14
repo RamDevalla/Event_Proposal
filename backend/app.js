@@ -18,7 +18,7 @@ app.use(express.json());
 app.use('/', ProposalRouter)
 app.use('/user', userRouter)
 app.use('/vendor', VendorRouter)
-app.get('/allProposals', userAuth, allProposals)
+
 
 
 const mongo = "mongodb+srv://ramdevalla777:xQIZ482FqhS0v1dH@cluster0.h0gxwmc.mongodb.net/Project_142023"

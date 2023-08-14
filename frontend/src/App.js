@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import ContextProvider from './contexts/ContextProvider';
+import AppRouter from './routers/AppRouter';
+import "./styles/home.css"
+import './styles/register.css'
+import './styles/header.css'
+import './styles/Proposals.css'
+import './styles/EachProposals.css'
+import './styles/userProposals.css'
+import './styles/singleProposal.css'
+import './styles/Createproposal.css'
+import './styles/Reset.css'
+import './styles/profile.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <ContextProvider>
+    <AppRouter/>
+  </ContextProvider>
+  
 }
 
 export default App;

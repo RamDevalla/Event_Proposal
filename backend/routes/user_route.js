@@ -6,8 +6,8 @@ userRouter.post('/selected/:id', addSelectedList);
 userRouter.delete('/selected/:id', delSelectedList);
 
 
-userRouter.post("/register", signup)
-userRouter.post("/login", signin)
+userRouter.post("/User/register", signup)
+userRouter.post("/User/login", signin)
 
 
 

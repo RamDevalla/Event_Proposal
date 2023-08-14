@@ -44,6 +44,7 @@ const signin = async (req, res) => {
   })
 
 }
+
 const addSelectedList = async (req, res) => {
   try {
     let id = await req.params.id;
@@ -76,6 +77,7 @@ const addSelectedList = async (req, res) => {
     })
   }
 }
+
 const delSelectedList = async (req, res) => {
   try {
     let id = req.params.id;
@@ -111,5 +113,7 @@ const delSelectedList = async (req, res) => {
 
 module.exports = {
   signup,
-  signin, addSelectedList, delSelectedList
+  signin, 
+  addSelectedList, 
+  delSelectedList
 }

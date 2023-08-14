@@ -18,12 +18,8 @@ app.use(express.json());
 //Routes
 app.use('/', ProposalRouter)
 app.use('/', userRouter)
-app.use('/user', userRouter)
-<<<<<<< HEAD
-=======
 app.use('/vendor', VendorRouter)
 
->>>>>>> 265424319007b013fdad4d296801ae2df6437ed0
 
 
 const mongo = "mongodb+srv://ramdevalla777:xQIZ482FqhS0v1dH@cluster0.h0gxwmc.mongodb.net/Project_142023"

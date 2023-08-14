@@ -16,7 +16,7 @@ app.use(express.json());
 
 //Routes
 app.use('/', ProposalRouter)
-app.use('/user', userRouter)
+app.use('/', userRouter)
 app.use('/vendor', VendorRouter)
 
 

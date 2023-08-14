@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 4000;
 const ProposalRouter = require('./routes/Proposal')
 const userRouter = require("./routes/user_route");
 const VendorRouter = require("./routes/vendor_route");
+
 app.use(cors({
   origin: "*"
 }))
@@ -17,7 +18,7 @@ app.use(express.json());
 //Routes
 app.use('/', ProposalRouter)
 app.use('/user', userRouter)
-app.use('/vendor', VendorRouter)
+app.use('/', VendorRouter)
 app.get('/allProposals', userAuth, allProposals)
 
 

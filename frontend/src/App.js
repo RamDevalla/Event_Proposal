@@ -9,7 +9,6 @@ import './styles/EachProposals.css'
 import './styles/userProposals.css'
 import './styles/singleProposal.css'
 import './styles/Createproposal.css'
-import './styles/Reset.css'
 import './styles/profile.css'
 
 function App() {

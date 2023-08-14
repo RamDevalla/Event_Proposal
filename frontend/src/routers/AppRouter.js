@@ -6,7 +6,6 @@ import VendorProposals from '../components/vendor/VendorProposals';
 import AllProposals from '../components/user/AllProposals';
 import SingleProposal from '../components/user/SingleProposal';
 import Createproposal from '../components/vendor/Createproposal';
-import Profile from '../Headers/Profile';
 
 
 function AppRouter() {

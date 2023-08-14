@@ -5,14 +5,18 @@ const cors = require("cors");
 require('dotenv').config();
 const PORT = process.env.PORT || 4000;
 const ProposalRouter = require('./routes/Proposal')
+const userRouter = require("./routes/user_route");
+const VendorRouter = require("./routes/vendor_route");
 app.use(cors({
   origin: "*"
 }))
 app.use(express.json());
 
 app.use('/', ProposalRouter)
+app.use('/', userRouter)
+app.use('/', VendorRouter)
 
-const mongo = "mongodb://localhost:27017/Event_Proposal_Project"
+const mongo = "mongodb+srv://ramdevalla777:xQIZ482FqhS0v1dH@cluster0.h0gxwmc.mongodb.net/Project_142023"
 mongoose.connect(mongo).then(() => {
   app.listen(PORT, () => {
     console.log(`MongoDB is connected Successfully`)

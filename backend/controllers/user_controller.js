@@ -1,4 +1,3 @@
-
 const User = require('../models/user_model')
 
 const signup = async (req, res, next) => {
@@ -20,7 +19,7 @@ const signin = async (req, res) => {
   const { email, password } = req.body
 
   if (!email || !password) {
-    res.status(400).json({ msg: "incomplete details" })
+    res.status(400).json({ msg: "Fill all the Fields" })
   }
   const user = await User.findOne({ email })
   if (!user) {

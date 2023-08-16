@@ -27,14 +27,16 @@ function VendorProposals() {
       {
         proposals.length === 0 ? <div>No Proposals to Show</div> :
           proposals.map((data) => (
-            <EachProposal setEdit ={setEdit} setCreatePage={setCreatePage} vendorProposals={data} key={data._id} onDeleteFunc={(id) => {
+            <EachProposal setEdit ={setEdit} setCreatePage={setCreatePage} vendorProposals={data} key={data._id} 
+            onDeleteFunc={(id) => {
               setProposals(proposals => proposals.filter(data => data._id !== id))
             }}
             />
           ))
       }
     </div>
-    {createPage ? <Createproposal edit={edit} setEdit = {setEdit} setProposals = {setProposals} proposals = {proposals} setCreate={setCreatePage} /> : ""}
+    {createPage ? <Createproposal edit={edit} setEdit = {setEdit} 
+    setProposals = {setProposals} proposals = {proposals} setCreate={setCreatePage} /> : ""}
   </div>
 }
 

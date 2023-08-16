@@ -142,10 +142,14 @@ function Createproposal({ setCreate, setProposals, proposals, edit, setEdit }) {
                   handlePlaceOfEventChange(e)
                 }}>
                   <option value={"Select"} >Select</option>
+                  <option value={"Visakhapatnam"} >Visakhapatnam</option>
+                  <option value={"Hyderabad"} >Hyderabad</option>
+                  <option value={"Godavari"} >Godavari</option>
                   <option value={"Tamilnadu"} >Tamilnadu</option>
                   <option value={"Bengaluru"} >Bengaluru</option>
-                  <option value={"Hydrabad"} >Hydrabad</option>
                   <option value={"Kerala"} >Kerala</option>
+                  <option value={"Mumbai"} >Mumbai</option>
+                  <option value={"KolKota"} >KolKota</option>  
                 </select>
               </div>
               <div className='fieldContainer'>
@@ -154,6 +158,8 @@ function Createproposal({ setCreate, setProposals, proposals, edit, setEdit }) {
                   handleProposalTypeChange(e)
                 }}>
                   <option value={"Select"} >Select</option>
+                  <option value={"Beach-party"} >Beach-party</option>
+                  <option value={"Beach-Festival"} >Beach-Festival</option>
                   <option value={"Formal"} >Formal</option>
                   <option value={"In-Formal"} >In-Formal</option>
                   <option value={"Internal"} >Internal</option>
@@ -172,6 +178,7 @@ function Createproposal({ setCreate, setProposals, proposals, edit, setEdit }) {
                   <option value={"Charity"} >Charity</option>
                   <option value={"Party"} >Party</option>
                   <option value={"Product launch"} >Product launch</option>
+                  <option value={"Audio launch"} >Audio launch</option>
                 </select>
               </div>
               <div className='fieldContainer'>

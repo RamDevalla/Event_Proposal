@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { addtoSelectedList, getProposalById } from '../../utils/utils.api';
+import { addtoSelectedList, getProposalById , deleteSelectedProposal} from '../../utils/utils.api';
 import { useAppContext } from '../../contexts/ContextProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function SingleProposal() {
+export default function SingleProposal({selectedProposals,onDeleteFunc}) {
     const params = useParams();
     const [proposal, setProposal] = useState([]);
     const { userDetails } = useAppContext();
@@ -14,22 +14,23 @@ export default function SingleProposal() {
         getProposalById(params.id).then((data) => {
             setProposal(data.data)
         })
-    }, [])
+    }, [params.id])
     const id = proposal._id;
     const data = {
         id
     }
     console.log(proposal)
-    return proposal.length === 0 ? <div className='preLoading'>pls wait...</div> :
+    return proposal.length === 0 ? <div className='preLoading'>Loading... !!!</div> :
         <div className='bodyContainer'>
             <div className='topContainer'>
                 <div className='topRow'>
                     <div>Proposal <span className='ContactName'>{proposal.vendorId.name} Contract</span></div>
+
                     <div className='SelectButton'>
                         <button
                             onClick={() => {
                                 addtoSelectedList(userDetails.user._id, data).then(data => {
-                                    console.log(data);
+                                    // console.log(data);
                                     data.status === "Success" ? toast.success("Added Successfully" , {
                                         position : 'top-right'
                                     }) : toast.error(data.message , {
@@ -39,13 +40,33 @@ export default function SingleProposal() {
                             }}
                         >Select</button>
                         <button
+                        onClick={()=>{
+                            deleteSelectedProposal(selectedProposals._id, data).then(res => {
+                                if (res.status === "Success") {
+                                    toast.success("Deleted Successfully", {
+                                        position: 'top-right'
+                                    })
+                                    console.log(selectedProposals._id)
+                                    // onDeleteFunc(selectedProposals.data);
+                                } else {
+                                    toast.error(res.message, {
+                                        position: 'top-right'
+                                    })
+                                }
+                            })
+                         }}
+                        > Remove  
+                        </button>
+                        <button
                             onClick={() => navigate(-1)}
                         >Back</button>
+
                     </div>
+
                 </div>
                 <div className='row1'>
                     <div className='vendorDetails'>
-                        <img src={proposal.images[0]} alt='Vendor Image' />
+                        <img src={proposal.images[0]} alt='Vendor_image' />
                         <div className='column'>
                             <div className='topic1'>Name</div>
                             <div className='details1'>{proposal.vendorId.name}</div>

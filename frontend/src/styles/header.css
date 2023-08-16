@@ -3,43 +3,53 @@
   display: flex;
   width: 100%;
   border: 2px solid #ccc;
+  background-color: grey;
 }
 .logoHolder {
-  color: #7f8792;
+  color: #ebb82b;
   font-weight: bold;
   font-size: 35px;
-  padding: 0px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
 }
-.userDetails {
+.userDetails {  
   display: flex;
   padding: 0px;
   margin-left: 75%;
 }
 .userDetails .nameContainer {
-  padding: 15px;
-  color: #64a1f5;
-  font-size: 25px;
+  padding: 1px;
+  color: solid black;
+  font-family: cursive;
+  font-weight:bolder;
+  font-size: xx-large;
+  margin-top: 11px;
 }
 .userDetails .profileImageContainer {
   padding: 10px 5px;
 }
 .userDetails .profileImageContainer img {
   width: 50px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 100px;
   padding: 2px;
   cursor: pointer;
 }
 .profileCard {
   position: fixed;
-  color: white;
-  background-color: #64a1f5;
+  color:black;
+  background-color: #d7ee8c;
   text-align: center;
-  font-weight: 700;
-  top: 90px;
-  right: 10px;
-  border-radius: 5px;
+  top: 70px;
+  right: 60px;
+  border-radius: 4px;
   cursor: pointer;
+  padding: 5px;
+  font-style: italic;
+  font-family: cursive;
+  font-weight: lighter;
 }
 .profileCard .card1 {
   border-bottom: 1px solid white;

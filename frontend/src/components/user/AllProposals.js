@@ -18,28 +18,43 @@ export default function AllProposals() {
     getUserSelectedProposals(userDetails.user._id).then(data => {
       SetselectedComponents(data)
     })
-  }, [])
+  }, [userDetails.user._id])
+
+  
+  const handleDeselect = (id) => {
+    SetselectedComponents(selectedComponents => ({
+      data: selectedComponents.data.filter(data => data._id !== id)
+    }));
+  };
+  
   return <div>
+
     <div className='bannerImage'>
       <img src={partyImage} alt='Banner' />
     </div>
+
     <div className='allPosts'>
       {selectedComponents.data.length === 0 ? "" :
         <div>
           <span>Selected</span>
           <div className='proposalsContainer'>
             {selectedComponents.data.map(data => (
-              <ProposalCard data={data} key={data._id} />
+              <ProposalCard data={data} key={data._id}  selectedProposals={selectedComponents.data} 
+              onDeselectFunc={handleDeselect} />
+              
             ))}
           </div>
         </div>
       }
+
       <span>Proposals</span>
       <div className='proposalsContainer'>
         {
           proposals.data.length === 0 ? <div>No Proposals Available</div> :
             proposals.data.map(data => (
-              <ProposalCard data={data} key={data._id} />
+              <ProposalCard data={data} key={data._id} 
+              
+              />
             ))
         }
       </div>

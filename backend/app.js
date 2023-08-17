@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const cors = require("cors");
 require('dotenv').config();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT ;
 
 
 const ProposalRouter = require('./routes/Proposal')
@@ -19,6 +19,7 @@ app.use(express.json());
 app.use('/api/v1/', ProposalRouter)
 app.use('/api/v1/', userRouter)
 app.use('/api/v1/vendor', VendorRouter)
+// app.use(express.static("build"));
 
 
 

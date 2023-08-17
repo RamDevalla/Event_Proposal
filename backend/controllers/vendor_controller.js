@@ -24,7 +24,7 @@ const signin = async (req, res) => {
   }
   const vendor = await Vendor.findOne({ email })
   if (!vendor) {
-    res.status(400).json({
+    return res.status(400).json({
       status: "Failed",
       message: "User Not Found"
     })

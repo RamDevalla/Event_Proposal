@@ -23,7 +23,7 @@ const signin = async (req, res) => {
   }
   const user = await User.findOne({ email })
   if (!user) {
-    res.status(400).json({
+    return res.status(400).json({
       status: "Failed",
       message: "User Not Found"
     })
@@ -113,7 +113,7 @@ const delSelectedList = async (req, res) => {
 
 module.exports = {
   signup,
-  signin, 
-  addSelectedList, 
+  signin,
+  addSelectedList,
   delSelectedList
 }

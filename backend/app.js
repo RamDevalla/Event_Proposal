@@ -16,9 +16,9 @@ app.use(cors({
 app.use(express.json());
 
 //Routes
-app.use('/', ProposalRouter)
-app.use('/', userRouter)
-app.use('/vendor', VendorRouter)
+app.use('/api/v1/', ProposalRouter)
+app.use('/api/v1/', userRouter)
+app.use('/api/v1/vendor', VendorRouter)
 
 
 

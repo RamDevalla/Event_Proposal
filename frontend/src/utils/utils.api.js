@@ -2,7 +2,7 @@ const BASE_URL = "http://localhost:7000"
 
 
 function register(data, userType) {
-    return fetch(`${BASE_URL}/${userType}/register`, {
+    return fetch(`/api/v1/${userType}/register`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -12,7 +12,7 @@ function register(data, userType) {
     }).then(res => res.json());
 }
 function login(data, userType) {
-    return fetch(`${BASE_URL}/${userType}/login`, {
+    return fetch(`/api/v1/${userType}/login`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ function login(data, userType) {
 }
 
 function getVendorSpecificProposals(id, token) {
-    return fetch(`${BASE_URL}/proposal/vendor/${id}`, {
+    return fetch(`/api/v1/proposal/vendor/${id}`, {
         headers: {
             'Content-Type': 'application/json',
             "accept": "application/json",
@@ -35,14 +35,14 @@ function getVendorSpecificProposals(id, token) {
 function createProposal(data) {
 
 
-    return fetch(`${BASE_URL}/proposal`, {
+    return fetch(`/api/v1/proposal`, {
         method: 'POST',
         body: data
     }).then((res) => res.json());
 }
 
 function deleteVendorProposal(id, token) {
-    return fetch(`${BASE_URL}/${id}`, {
+    return fetch(`/api/v1/${id}`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -53,26 +53,26 @@ function deleteVendorProposal(id, token) {
 }
 
 function editProposal(data, userId) {
-    return fetch(`${BASE_URL}/${userId}`, {
+    return fetch(`/api/v1/${userId}`, {
         method: "PUT",
         body: data
     }).then(res => res.json());
 }
 
 function getAllProposals() {
-    return fetch(`${BASE_URL}/proposals`).then(res => res.json());
+    return fetch(`/api/v1/proposals`).then(res => res.json());
 }
 
 function getProposalById(id) {
-    return fetch(`${BASE_URL}/proposal/${id}`).then(res => res.json());
+    return fetch(`/api/v1/proposal/${id}`).then(res => res.json());
 }
 
 function getUserSelectedProposals(id) {
-    return fetch(`${BASE_URL}/selected/${id}`).then(res => res.json());
+    return fetch(`/api/v1/selected/${id}`).then(res => res.json());
 }
 
 function addtoSelectedList(userId, data) {
-    return fetch(`${BASE_URL}/selected/${userId}`, {
+    return fetch(`/api/v1/selected/${userId}`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ function addtoSelectedList(userId, data) {
 }
 
 function deleteSelectedProposal(id, token) {
-    return fetch(`${BASE_URL}/${id}`, {
+    return fetch(`/api/v1/${id}`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',

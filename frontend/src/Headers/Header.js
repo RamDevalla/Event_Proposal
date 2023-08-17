@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useAppContext } from '../contexts/ContextProvider'
-import image from '../Images/user.png'
 import { Outlet } from 'react-router';
 import ProfileCard from './ProfileCard';
 
@@ -8,7 +7,7 @@ export default function Header() {
   const { userDetails } = useAppContext();
   const [card, setCard] = useState(true);
 
-  
+
   if (userDetails === '') {
     return <div>
       Unauthorised

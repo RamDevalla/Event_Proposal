@@ -64,7 +64,7 @@ function Createproposal({ setCreate, setProposals, proposals, edit, setEdit }) {
       setFoodPreferences(edit.foodPreferences);
       setEvents(edit.events);
     }
-  }, [])
+  }, [edit])
 
   function setPreview(files) {
     setImages("");
@@ -149,7 +149,7 @@ function Createproposal({ setCreate, setProposals, proposals, edit, setEdit }) {
                   <option value={"Bengaluru"} >Bengaluru</option>
                   <option value={"Kerala"} >Kerala</option>
                   <option value={"Mumbai"} >Mumbai</option>
-                  <option value={"KolKota"} >KolKota</option>  
+                  <option value={"KolKota"} >KolKota</option>
                 </select>
               </div>
               <div className='fieldContainer'>

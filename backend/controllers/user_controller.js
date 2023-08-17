@@ -19,7 +19,7 @@ const signin = async (req, res) => {
   const { email, password } = req.body
 
   if (!email || !password) {
-    res.status(400).json({ msg: "Fill all the Fields" })
+    return res.status(400).json({ msg: "Fill all the Fields" })
   }
   const user = await User.findOne({ email })
   if (!user) {
@@ -50,7 +50,7 @@ const addSelectedList = async (req, res) => {
     let id = await req.params.id;
     let user = await User.findById(id);
     if (!user) {
-      res.status(400).json({
+      return res.status(400).json({
         status: "Failed",
         message: "User Not Found"
       })

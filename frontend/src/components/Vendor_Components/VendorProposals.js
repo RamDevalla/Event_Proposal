@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import search from '../../Images/search.svg';
-import { useAppContext } from '../../contexts/ContextProvider';
-import { getVendorSpecificProposals } from '../../utils/utils.api';
+import { useAppContext } from '../../Context/ContextProvider';
+import { getVendorSpecificProposals } from '../../Apis/utils.api';
 import EachProposal from './EachProposal';
 import Createproposal from './Createproposal';
 function VendorProposals() {
@@ -13,7 +13,7 @@ function VendorProposals() {
     getVendorSpecificProposals(userDetails.user._id, userDetails.token).then(res => {
       setProposals(res.data.reverse());
     })
-  }, [])
+  }, [userDetails, edit])
   return <div className='proposalsHolder'>
     <span>Proposals</span>
     <img src={search} alt='Search' />

@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { addtoSelectedList, getProposalById , deleteSelectedProposal} from '../../utils/utils.api';
+import { addtoSelectedList, getProposalById, deleteSelectedProposal } from '../../Apis/utils.api';
 import { useAppContext } from '../../Context/ContextProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function SingleProposal({selectedProposals,onDeleteFunc}) {
+export default function SingleProposal({ selectedProposals, onDeleteFunc }) {
     const params = useParams();
     const [proposal, setProposal] = useState([]);
     const { userDetails } = useAppContext();
@@ -31,31 +31,31 @@ export default function SingleProposal({selectedProposals,onDeleteFunc}) {
                             onClick={() => {
                                 addtoSelectedList(userDetails.user._id, data).then(data => {
                                     // console.log(data);
-                                    data.status === "Success" ? toast.success("Added Successfully" , {
-                                        position : 'top-right'
-                                    }) : toast.error(data.message , {
-                                        position : 'top-right'
+                                    data.status === "Success" ? toast.success("Added Successfully", {
+                                        position: 'top-right'
+                                    }) : toast.error(data.message, {
+                                        position: 'top-right'
                                     })
                                 })
                             }}
                         >Select</button>
                         <button
-                        onClick={()=>{
-                            deleteSelectedProposal(selectedProposals._id, data).then(res => {
-                                if (res.status === "Success") {
-                                    toast.success("Deleted Successfully", {
-                                        position: 'top-right'
-                                    })
-                                    console.log(selectedProposals._id)
-                                    // onDeleteFunc(selectedProposals.data);
-                                } else {
-                                    toast.error(res.message, {
-                                        position: 'top-right'
-                                    })
-                                }
-                            })
-                         }}
-                        > Remove  
+                            onClick={() => {
+                                deleteSelectedProposal(selectedProposals._id, data).then(res => {
+                                    if (res.status === "Success") {
+                                        toast.success("Deleted Successfully", {
+                                            position: 'top-right'
+                                        })
+                                        console.log(selectedProposals._id)
+                                        // onDeleteFunc(selectedProposals.data);
+                                    } else {
+                                        toast.error(res.message, {
+                                            position: 'top-right'
+                                        })
+                                    }
+                                })
+                            }}
+                        > Remove
                         </button>
                         <button
                             onClick={() => navigate(-1)}
@@ -140,6 +140,6 @@ export default function SingleProposal({selectedProposals,onDeleteFunc}) {
                     </div>
                 </div>
             </div>
-            <ToastContainer/>
+            <ToastContainer />
         </div>
 }

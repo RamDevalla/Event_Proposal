@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:7000"
+// const BASE_URL = "http://localhost:7000"
 
 
 function register(data, userType) {
@@ -94,7 +94,7 @@ function deleteSelectedProposal(id, token) {
 }
 
 
-export default BASE_URL;
+// export default BASE_URL;
 export {
     register,
     login,

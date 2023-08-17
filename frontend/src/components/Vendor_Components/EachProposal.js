@@ -2,7 +2,7 @@ import editicon from '../../Images/pencil-edit-button.svg';
 import deleteicon from '../../Images/bin.svg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { deleteVendorProposal } from '../../utils/utils.api';
+import { deleteVendorProposal } from '../../Apis/utils.api';
 import { useAppContext } from '../../Context/ContextProvider';
 
 export default function EachProposal({ vendorProposals, onDeleteFunc, setCreatePage, setEdit }) {

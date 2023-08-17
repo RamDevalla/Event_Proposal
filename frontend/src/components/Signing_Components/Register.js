@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAppContext } from '../../Context/ContextProvider';
-import { register } from '../../utils/utils.api';
+import { register } from '../../Apis/utils.api';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -115,7 +115,7 @@ function Register({ setLog }) {
           required
           minLength={8}
         />
-              <div className='registerBlock'>
+        <div className='registerBlock'>
           <button type="submit"
           >{load ? "Register" : <span className='loader'></span>}</button>
         </div>

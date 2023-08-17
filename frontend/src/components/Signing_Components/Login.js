@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAppContext } from '../../Context/ContextProvider';
-import { login } from '../../utils/utils.api';
+import { login } from '../../Apis/utils.api';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router';
@@ -54,7 +54,7 @@ function Login({ setLog }) {
         >User</button>
       </div>
       <div className='topicHolder'>Sign in your account</div>
-      
+
       <form onSubmit={handleSubmit} method='post' action='#' className='content'>
         <input type="email" value={email} onChange={handleEmailChange}
           placeholder='Email' required
@@ -68,8 +68,8 @@ function Login({ setLog }) {
         />
 
         <div className='forgotPassword'>
-            <p className='forget_para'> forgot password? </p>
-          
+          <p className='forget_para'> forgot password? </p>
+
         </div>
 
         <div className='registerBlock'>

@@ -1,8 +1,8 @@
-// const BASE_URL = "http://localhost:7000"
+const BASE_URL = "http://localhost:7000/api/v1"
 
 
 function register(data, userType) {
-    return fetch(`/api/v1/${userType}/register`, {
+    return fetch(`${BASE_URL}/${userType}/register`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -12,7 +12,7 @@ function register(data, userType) {
     }).then(res => res.json());
 }
 function login(data, userType) {
-    return fetch(`/api/v1/${userType}/login`, {
+    return fetch(`${BASE_URL}/${userType}/login`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',

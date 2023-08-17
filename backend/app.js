@@ -13,13 +13,14 @@ const VendorRouter = require("./routes/vendor_route");
 app.use(cors({
   origin: "*"
 }))
+
 app.use(express.json());
 
 //Routes
 app.use('/api/v1/', ProposalRouter)
 app.use('/api/v1/', userRouter)
 app.use('/api/v1/vendor', VendorRouter)
-// app.use(express.static("build"));
+app.use(express.static("build"));
 
 
 

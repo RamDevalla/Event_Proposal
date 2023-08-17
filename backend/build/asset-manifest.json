@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b9412a3a.css",
+    "main.js": "/static/js/main.a5af6463.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/party-people-enjoy-concert-at-festival-summer-DHDMPWH.png": "/static/media/party-people-enjoy-concert-at-festival-summer-DHDMPWH.e4e66c3ecf5e74aef3d7.png",
+    "static/media/private-party-venues@2x.png": "/static/media/private-party-venues@2x.413dcee4d7f2741a2291.png",
+    "static/media/bin.svg": "/static/media/bin.0807a173b1f6101ddae2acec08005ea7.svg",
+    "index.html": "/index.html",
+    "static/media/pencil-edit-button.svg": "/static/media/pencil-edit-button.24c18bcfa1435a6b147fe8a67144aea7.svg",
+    "static/media/close.svg": "/static/media/close.c88cf50d095e6f7a30ec97a97b7b5696.svg",
+    "static/media/search.svg": "/static/media/search.d14fe065c990b340cbe72d0ea5a3cc03.svg",
+    "main.b9412a3a.css.map": "/static/css/main.b9412a3a.css.map",
+    "main.a5af6463.js.map": "/static/js/main.a5af6463.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9412a3a.css",
+    "static/js/main.a5af6463.js"
+  ]
+}

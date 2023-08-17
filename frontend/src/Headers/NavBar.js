@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { useAppContext } from '../contexts/ContextProvider'
+import { useAppContext } from '../Context/ContextProvider'
 import { Outlet } from 'react-router';
-import ProfileCard from './ProfileCard';
+import ToogleBar from './ToogleBar';
 
-export default function Header() {
+export default function NavBar() {
   const { userDetails } = useAppContext();
   const [card, setCard] = useState(true);
 
@@ -27,7 +27,7 @@ export default function Header() {
           }}>
             <img src="https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png" alt='ProfileImage' />
           </div>
-          {card ? "" : <ProfileCard setCard={setCard} />}
+          {card ? "" : <ToogleBar setCard={setCard} />}
         </div>
       </div>
       <Outlet />

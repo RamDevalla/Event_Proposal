@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import partyImage from '../../Images/private-party-venues@2x.png'
-import { getAllProposals, getUserSelectedProposals } from '../../utils/utils.api';
+import { getAllProposals, getUserSelectedProposals } from '../../Apis/utils.api';
 import ProposalCard from './ProposalCard';
-import { useAppContext } from '../../contexts/ContextProvider';
+import { useAppContext } from '../../Context/ContextProvider';
 
 
 export default function AllProposals() {

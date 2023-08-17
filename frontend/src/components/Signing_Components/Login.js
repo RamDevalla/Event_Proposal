@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAppContext } from '../../contexts/ContextProvider';
+import { useAppContext } from '../../Context/ContextProvider';
 import { login } from '../../utils/utils.api';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -53,7 +53,8 @@ function Login({ setLog }) {
           onClick={() => changeUserType(userType => userType === "Vendor" ? "User" : "Vendor")}
         >User</button>
       </div>
-      <div className='topicHolder'>Sign In to your account</div>
+      <div className='topicHolder'>Sign in your account</div>
+      
       <form onSubmit={handleSubmit} method='post' action='#' className='content'>
         <input type="email" value={email} onChange={handleEmailChange}
           placeholder='Email' required
@@ -65,16 +66,18 @@ function Login({ setLog }) {
           onChange={handlePassword}
           required
         />
-        <div className='forgotPassword'>
 
-          forgot password?
+        <div className='forgotPassword'>
+            <p className='forget_para'> forgot password? </p>
+          
         </div>
+
         <div className='registerBlock'>
           <button type="submit">{load ? "Sign In" : <span className='loader'></span>}</button>
         </div>
-        <button className='siginButton'
+        <button className='sigupButton'
           onClick={() => setLog(isLog => !isLog)}
-        >Register</button>
+        > Create Account</button>
       </form>
       <ToastContainer />
     </div>

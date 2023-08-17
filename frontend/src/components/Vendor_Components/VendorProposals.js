@@ -13,7 +13,7 @@ function VendorProposals() {
     getVendorSpecificProposals(userDetails.user._id, userDetails.token).then(res => {
       setProposals(res.data.reverse());
     })
-  }, [userDetails, edit])
+  }, [])
   return <div className='proposalsHolder'>
     <span>Proposals</span>
     <img src={search} alt='Search' />

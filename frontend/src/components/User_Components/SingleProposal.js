@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { addtoSelectedList, getProposalById , deleteSelectedProposal} from '../../utils/utils.api';
+import { addtoSelectedList, getProposalById , deleteSelectedProposal} from '../../Apis/utils.api';
 import { useAppContext } from '../../Context/ContextProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

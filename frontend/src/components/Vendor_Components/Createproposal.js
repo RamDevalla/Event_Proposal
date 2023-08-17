@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { createProposal, editProposal } from '../../utils/utils.api';
+import { createProposal, editProposal } from '../../Apis/utils.api';
 import close from '../../Images/close.svg'
 import { useAppContext } from '../../Context/ContextProvider';
 

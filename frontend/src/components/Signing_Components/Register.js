@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAppContext } from '../../contexts/ContextProvider';
+import { useAppContext } from '../../Context/ContextProvider';
 import { register } from '../../utils/utils.api';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -115,18 +115,11 @@ function Register({ setLog }) {
           required
           minLength={8}
         />
-        {/* <input
-          type='text'
-          value={resetAnswer}
-          onChange={handleresetAnswer}
-          placeholder='Whats your favorite place'
-          required
-        /> */}
-        <div className='registerBlock'>
+              <div className='registerBlock'>
           <button type="submit"
           >{load ? "Register" : <span className='loader'></span>}</button>
         </div>
-        <button className='siginButton'
+        <button className='signinButton'
           onClick={() => setLog(isLog => !isLog)}
         >Sign In</button>
       </form>

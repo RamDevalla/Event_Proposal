@@ -1,0 +1,18 @@
+.forget_para{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.forgotPassword{
+    color: black;
+    padding: 5px;
+}
+.sigupButton{
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    color: #4E94F4;
+    margin: 5px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}

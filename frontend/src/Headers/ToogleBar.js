@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router";
-import { useAppContext } from "../contexts/ContextProvider"
+import { useAppContext } from "../Context/ContextProvider"
 
 
-export default function ProfileCard({ setCard }) {
+export default function ToogleBar({ setCard }) {
     const { userDetails, setUserDetails } = useAppContext();
     const navigate = useNavigate();
     function logout() {

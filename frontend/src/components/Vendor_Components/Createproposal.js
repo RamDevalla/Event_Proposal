@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { createProposal, editProposal } from '../../utils/utils.api';
 import close from '../../Images/close.svg'
-import { useAppContext } from '../../contexts/ContextProvider';
+import { useAppContext } from '../../Context/ContextProvider';
 
 
 
@@ -64,7 +64,7 @@ function Createproposal({ setCreate, setProposals, proposals, edit, setEdit }) {
       setFoodPreferences(edit.foodPreferences);
       setEvents(edit.events);
     }
-  }, [])
+  }, [edit])
 
   function setPreview(files) {
     setImages("");

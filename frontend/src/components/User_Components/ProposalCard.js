@@ -8,7 +8,7 @@ export default function ProposalCard({data}){
             navigate(`${data._id}`)
         }}
     >
-        <img src={data.images[0]}/>
+        <img src={data.images[0]} alt="profile_pic" />
         {/* <div>{data.vendorId.name}</div> */}
         <div>{data.budget}</div>
         <div>{data.eventPlace}/-</div>

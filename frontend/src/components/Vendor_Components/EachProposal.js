@@ -3,7 +3,7 @@ import deleteicon from '../../Images/bin.svg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { deleteVendorProposal } from '../../utils/utils.api';
-import { useAppContext } from '../../contexts/ContextProvider';
+import { useAppContext } from '../../Context/ContextProvider';
 
 export default function EachProposal({ vendorProposals, onDeleteFunc, setCreatePage, setEdit }) {
     const { userDetails } = useAppContext();
